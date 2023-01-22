@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+:root {
+    --font-family-main: "Poppins", sans-serif;
+    --main-color : #6666ff;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var( --font-family-main);
+    background: url(img/bg.png);
+    background-size: cover;
+    color: #fff;
+}
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.43);
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    font-size: clamp(45px, 5cqi, 70px);
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.content {
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#area {
+    max-width: 100%;
+    width: 300px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    display: grid;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cell {
+    text-align: center;
+    font-size: 70px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    border: 1px solid #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background .1s;
+}
+
+.cell:hover {
+    background-color: #6666ff65;
+}
+
+.currentPlayer {
+    width: 165px;
+    max-width: 100%;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#curPlyr {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
+
+.stat table {
+    border-collapse: collapse;
+}
+
+.stat table, .stat th, .stat td {
+    border: 1px solid #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.stat td span {
+    font-weight: 300;
+}
+
+.x-class {
+    color: #6666ff;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+.o-class {
+    color: rgb(255, 105, 41);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.x-class:hover, .o-class:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+@media screen and (max-width: 825px) {
+    .content {
+        display: flex;
+        flex-direction: column !important;
+        gap: 40px;
+        text-align: center;
+    }
+    .currentPlayer {
+        width: max-content;
+    }
+}

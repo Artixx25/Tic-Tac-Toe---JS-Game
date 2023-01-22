@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/566/566294.png" size="60">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe - Artixx</title>
+</head>
+<body>
+    <h2 class="logo">Artixx</h2>
+    <div class="content">
+
+        <div class="currentPlayer">
+            <span>Now turn of: <span id="curPlyr">×</span></span>
+        </div>
+
+        <div id="area"></div>
+
+        <div class="stat">
+            <table>
+                <th colspan="2">Statistic</th>
+                <tr>
+                    <td>&times;</td>
+                    <td><span id="sX">0</span></td>
+                </tr>
+                <tr>
+                    <td>O</td>
+                    <td><span id="sO">0</span></td>
+                </tr>
+                <tr>
+                    <td>Draw</td>
+                    <td><span id="sD">0</span></td>
+                </tr>
+            </table>
+        </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
